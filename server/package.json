@@ -1,0 +1,41 @@
+{
+  "name": "server",
+  "version": "0.1.0",
+  "engines": {
+    "node": "12.x"
+  },
+  "private": true,
+  "description": "Group28 - Backend REST API for Web and Mobile Engineering (DIT342)",
+  "main": "./app.js",
+  "scripts": {
+    "start": "node ./app.js",
+    "dev": "nodemon ./app.js",
+    "lint": "eslint .",
+    "test": "cross-env-shell MONGODB_URI=mongodb+srv://group28_mongo:KCU4EhVRTcePMESq@cluster0.brp1ata.mongodb.net/?retryWrites=true \"npm run newman-server\"",
+    "ci-test": "npm run newman-server",
+    "newman-server": "cross-env-shell PORT=3001 \"npm run dropdb && run-p --race start newman-wait\"",
+    "newman-wait": "wait-on http://localhost:3001 && npm run newman",
+    "newman": "newman run ./tests/server.postman_collection.json --env-var host=http://localhost:3001",
+    "dropdb": "node ./tests/dropdb.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://git.chalmers.se/courses/dit342/2022/group-28-web.git"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "connect-history-api-fallback": "^1.6.0",
+    "cors": "^2.8.5",
+    "dotenv-safe": "^8.2.0",
+    "express": "^4.18.1",
+    "mongoose": "^5.13.15",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "newman": "^5.3.2",
+    "nodemon": "^2.0.19",
+    "npm-run-all": "^4.1.5",
+    "wait-on": "^5.3.0"
+  }
+}

@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "16475190-205bec90-b278-4c19-b189-1b1d663e2e38",
+		"name": "Group-28 Test API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET ALL - Clients",
+			"request": {
+				"url": "{{host}}/api/clients",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Get lists of all clients"
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL - Accounts",
+			"request": {
+				"url": "{{host}}/api/accounts",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Get lists of all accounts"
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL - Transactions",
+			"request": {
+				"url": "{{host}}/api/transactions",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Get lists of all transactions"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "9cc10180-1a09-400d-ab4d-810fb86d20ac",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "cdadbc42-368d-40c6-a232-e34de2e95e66",
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Successfully submitted request\", function(){",
+					"    pm.response.to.have.status(200);",
+					"});",
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "cd185905-a834-4211-8030-583d17702534",
+			"key": "host",
+			"value": "http://localhost:3001",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}

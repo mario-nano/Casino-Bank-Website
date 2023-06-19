@@ -1,0 +1,170 @@
+/* Template Name: BANINO app
+   Author: Altan
+   E-mail: noah@e-nomads.com
+   Created: September 2022
+   Version: 0.5.0
+   Updated: October 2022
+   File Description: Main Css file of the DIT342 app
+*/
+
+/* Variables.scss */
+
+/* Colors */
+$white:                     #ffffff;
+$primary:                   #0e9948 !default;
+$primary-dark:              #006600;
+$primary-light:             #8fe593;
+$primary-lighter:           #c5f1c6;
+$primary-active:            #0e9948;
+$secondary:                 #07AD00;
+$success:                   #30c78d;
+$warning:                   #c47d22;
+$info:                      #5cace5;
+$danger:                    #c42222;
+$dark:                      #3c4858;
+$black:                     #161c2d;
+$muted:                     #8492a6;
+$light:                     #f8f9fc;
+
+/* Gray */
+$gray-100:                  #f8f9fa;
+$gray-200:                  #e9ecef;
+$gray-300:                  #dee2e6;
+$gray-400:                  #ced4da;
+$gray-500:                  #adb5bd;
+$gray-600:                  #6c757d;
+$gray-700:                  #495057;
+$gray-800:                  #424242;
+
+/* Overlay */
+$overlay:                   rgba($dark, 0.7);
+$bg-overlay-white:          rgba($white, 0.5);
+
+/* Body Background */
+$shadow:                    0 0 3px rgba($dark,.15);
+$shadow-md:                 0 5px 13px rgba($dark, .2);
+$shadow-lg:                 0 10px 25px rgba($dark, 0.15);
+$footer:                    lighten($black, 6%);
+$body-bg:                   #fff;
+
+$font-family-base:          'Open Sans', sans-serif;
+$font-family-secondary:     'Open Sans', sans-serif;
+
+/* Body Background */
+$default:                   #2f55d4;
+$green:                     #6dc77a;
+$red:                       #ff5b69;
+$purple:                    #7952B3;
+$skyblue:                   #32c2ec;
+$skobleoff:                 #0f7173;
+$cyan:                      #00c9a7;
+$slateblue:                 #766df4;
+$yellow:                    #f7961c;
+$btn-close-bg-dark:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$black}'><path d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/></svg>");
+$btn-close-width:            1em;
+
+$colors: (
+    "primary-dark": $primary-dark,
+    "primary": $primary,
+    "primary-light": $primary-light,
+    "primary-lighter": $primary-lighter,
+    "secondary": $secondary,
+    "success": $success,
+    "warning": $warning,
+    "info": $info,
+    "danger": $danger,
+    "dark": $dark,
+    "muted": $muted,
+    "light": $light,
+    "blue": $primary,
+    "footer": $footer
+);
+
+$heading-font-sizes: (
+    "h1": 42px,
+    "h2": 36px,
+    "h3": 30px,
+    "h4": 24px,
+    "h5": 20px,
+    "h6": 16px,
+);
+
+
+
+$display-font-sizes: (
+    "display-1": 80px,
+    "display-2": 72px,
+    "display-3": 64px,
+    "display-4": 56px,
+);
+
+/* Z-INDEXES */
+$loader-zIndex: 99999;
+$modal-zIndex: calc(#{$loader-zIndex} - 1);
+$header-zIndex: calc(#{$modal-zIndex} - 1);
+
+/* Border Radius */
+$border-radius-sm: 0.325rem !default;
+$border-radius: 0.475rem !default;
+$border-radius-lg: 0.625rem !default;
+$border-radius-xl: 1rem !default;
+
+/* Dropdown menu container and contents */
+$dropdown-box-shadow: (
+                0px 0px 30px rgba(0, 0, 0, 0.3),
+                0px 0px 50px 0px rgba(82, 63, 105, 0.15)
+) !default;
+$dropdown-border-radius: $border-radius !default;
+$dropdown-border-width: 0 !default;
+$dropdown-bg: $body-bg !default;
+
+/* Menu */
+$menu: (
+        dropdown: (
+                box-shadow: $dropdown-box-shadow,
+                z-index: 107,
+                background-color: $dropdown-bg,
+                border-radius: $dropdown-border-radius,
+                animation: true,
+                animation-speed: 0.3s,
+                animation-move-offset: 0.75rem,
+        ),
+        accordion: (
+                indention: 1rem,
+                arrow-transition: transform 0.3s ease,
+        ),
+        item: (
+                self: (
+                        padding-y: 0.15rem,
+                        padding-x: 0,
+                ),
+        ),
+        link: (
+                self: (
+                        padding-y: 0.65rem,
+                        padding-x: 1rem,
+                        bg-color: (
+                                hover: $primary-light,
+                                show: $primary-light,
+                                here: $primary-light,
+                                active: $primary-active,
+                        ),
+                ),
+                icon: (
+                        width: 2rem,
+                        space: 0.5rem,
+                ),
+                bullet: (
+                        width: 1.25rem,
+                        space: 0.5rem,
+                ),
+                badge: (
+                        space: 0.5rem,
+                ),
+                arrow: (
+                        height: 0.8rem,
+                        width: 0.8rem,
+                        space: 0.5rem,
+                ),
+        ),
+) !default;
